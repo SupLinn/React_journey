@@ -1,0 +1,15 @@
+div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+button {
+    padding: 5px;
+    background-color: rgb(167, 166, 166);
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+}
