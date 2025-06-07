@@ -1,0 +1,25 @@
+{
+  "name": "basics_to_advance",
+  "version": "1.0.0",
+  "description": "React learning",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SupLinn/React_journey.git"
+  },
+  "author": "Sushil Kumar Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SupLinn/React_journey/issues"
+  },
+  "homepage": "https://github.com/SupLinn/React_journey#readme",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
