@@ -45,10 +45,13 @@
     background-color: #f0f0f0;
 }
 
-.search-bar {
-    padding: 10px;
-}
+
 
 .res-img {
     width: 100%;
+}
+
+.filer-button {
+    cursor : pointer;
+    margin : 10px;
 }
