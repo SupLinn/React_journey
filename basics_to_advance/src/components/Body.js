@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
+    // Whenever State variable updates(through set meethods), react triggers a reconciliation cycle ie re-render the whole component   
     const [listOfRes, setListOfRes] = useState([])
+    const [searchtext, setSearchtext] = useState("");
     useEffect(() => {
         fetchData();
     }, [])
@@ -25,6 +27,23 @@ const Body = () => {
         return (
             <div className="body">
                 <div className="filter">
+                    <div className="search">
+                        <input className="search-box" 
+                        placeholder="Enter Restaurant Name"
+                        value={searchtext}
+                        onChange={(e) => {
+                            setSearchtext(e.target.value);
+                        }}></input>
+                        
+                        <button
+                        onClick={() => {
+                            // now I will update the value of the listofres
+                            const newList = listOfRes.filter((item) => {
+                                return item.info.name.toLowerCase().includes(searchtext.toLowerCase());
+                            })
+                            setListOfRes(newList);
+                        }}>search</button>
+                    </div>
                     <button className="filer-button"
                         onClick={() => {
                             const filteredList = listOfRes.filter((item) => {
