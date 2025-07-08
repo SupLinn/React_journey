@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { LOGO_URL } from "../utils/constants"
 import { useState } from "react";
 
@@ -11,10 +12,9 @@ const Header = () => {
                 </div>
                 <div className="menu-bar">
                     <ul>
-                        <li>Menu</li>
-                        <li>Restraunts</li>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/contact">Contact Us</Link></li>
                         <button className="login-btn"
                             onClick={()=>{
                                 btnName === "login"? setBtnName("logout") : setBtnName("login")
