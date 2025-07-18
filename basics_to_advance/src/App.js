@@ -6,6 +6,7 @@
     import About from "./components/About"
     import Contact from "./components/Contact"
     import Error from "./components/Error"
+    import RestaurantMenu from "./components/RestaurantMenu"
    
     const App = () => {
         return (
@@ -33,6 +34,10 @@
                 {
                     path : "contact",
                     element : <Contact/>
+                },
+                {
+                    path : "/restaurants/:resId",
+                    element : <RestaurantMenu />
                 }
             ],
             errorElement : <Error/>
