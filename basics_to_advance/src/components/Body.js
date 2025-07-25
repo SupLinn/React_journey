@@ -1,6 +1,7 @@
 import RestaurentCards from "./RestaurentCards"
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router";
 
 const Body = () => {
     // Whenever State variable updates(through set meethods), react triggers a reconciliation cycle ie re-render the whole component   
@@ -61,7 +62,12 @@ const Body = () => {
                     {
                         // To write JS we use {}
                         // Here key property will optimise the re-rendering when new item will come with unique id that's why its important to use key.
-                        listOfRes.map((item) => ( <RestaurentCards key={item.info.id} resData = {item}/> ))
+                        listOfRes.map((item) => ( 
+                        <Link key={item.info.id} 
+                              to={"/restaurants/"+item.info.id}> 
+                            <RestaurentCards resData = {item}/> 
+                        </Link> 
+                    ))
                     }
                     
                 </div>
